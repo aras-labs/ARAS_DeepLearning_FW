@@ -1,6 +1,6 @@
 # Config Base pytorch FrameWork
 
-#ARAS-Farabi Experimental Framework for Skill Assessment in Capsulorhexis Surgery
+ARAS-Farabi Experimental Framework for Skill Assessment in Capsulorhexis Surgery
 
 Download AFCID Dataset:
 Contant mjahmadi@email.kntu.ac.ir

@@ -2,7 +2,7 @@
 
 ARAS-Farabi Experimental Framework for Skill Assessment in Capsulorhexis Surgery
 
-Download AFCID Dataset and .pt File:
+Download AFCID Dataset and .pt Files:
 Contant mjahmadi@email.kntu.ac.ir
 
 Real-time performance in detecting and tracking the capsulorhexis cystotome and pupil using the AFCID dataset:

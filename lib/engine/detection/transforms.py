@@ -35,7 +35,7 @@ class RandomHorizontalFlip(T.RandomHorizontalFlip):
         if torch.rand(1) < self.p:
             image = F.hflip(image)
             if target is not None:
-                width, _ = F.get_image_size(image)
+                width, _ = F._get_image_size(image)
                 target["boxes"][:, [0, 2]] = width - target["boxes"][:, [2, 0]]
                 if "masks" in target:
                     target["masks"] = target["masks"].flip(-1)
@@ -78,7 +78,7 @@ class RandomIoUCrop(nn.Module):
             elif image.ndimension() == 2:
                 image = image.unsqueeze(0)
 
-        orig_w, orig_h = F.get_image_size(image)
+        orig_w, orig_h = F._get_image_size(image)
 
         while True:
             # sample an option
@@ -159,7 +159,7 @@ class RandomZoomOut(nn.Module):
         if torch.rand(1) < self.p:
             return image, target
 
-        orig_w, orig_h = F.get_image_size(image)
+        orig_w, orig_h = F._get_image_size(image)
 
         r = self.side_range[0] + torch.rand(1) * (self.side_range[1] - self.side_range[0])
         canvas_width = int(orig_w * r)
